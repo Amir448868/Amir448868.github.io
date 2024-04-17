@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de desplazamiento suave</title>
+    <style>
+        /* Estilos opcionales para el ejemplo */
+        body {
+            height: 400vh;
+            /* Crea suficiente altura para probar el desplazamiento */
+        }
+
+        .section {
+            height: 100vh;
+            /* Define el tamaño de cada sección (100vh) */
+            background-color: lightblue;
+            /* Estilo visual opcional */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Enlaces a las secciones -->
+    <a href="#" class="enlace-scroll" data-destino="portfolio">Ir a Portfolio</a>
+    <a href="#" class="enlace-scroll" data-destino="about">Ir a About</a>
+    <a href="#" class="enlace-scroll" data-destino="services">Ir a Services</a>
+    <a href="#" class="enlace-scroll" data-destino="contact">Ir a Contact</a>
+
+    <!-- Secciones -->
+    <div id="portfolio" class="section">Portfolio</div>
+    <div id="about" class="section">About</div>
+    <div id="services" class="section">Services</div>
+    <div id="contact" class="section">Contact</div>
+
+    <!-- Script para desplazamiento suave -->
+    <script>
+        // Función para desplazarse suavemente a una sección
+        function scrollToSection(destinoId) {
+            const destino = document.getElementById(destinoId);
+            window.scrollTo({
+                top: destino.offsetTop,
+                behavior: 'smooth' // Desplazamiento suave
+            });
+        }
+
+        // Agregar el evento de clic a todos los enlaces con la clase "enlace-scroll"
+        const enlaces = document.querySelectorAll('.enlace-scroll');
+        enlaces.forEach(function (enlace) {
+            enlace.addEventListener('click', function (e) {
+                e.preventDefault();
+                const destinoId = enlace.getAttribute('data-destino');
+                scrollToSection(destinoId);
+            });
+        });
+    </script>
+</body>
+
+</html>
