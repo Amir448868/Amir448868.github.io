@@ -296,7 +296,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-image: url(../img/full-frame-folded-black-curtain.jpg);
   background-size: cover;
 }
@@ -553,6 +552,7 @@ header {
   align-items: center;
   border-radius: 20px;
   padding: 1%;
+  margin-top: 6%;
 }
 
 .proyecto-portfolio span {
@@ -623,4 +623,12 @@ header {
   align-items: center;
   border-radius: 10px;
   width: 80%;
+}
+
+.video {
+  width: 100%;
+}
+
+#ver-repo {
+  margin-left: 45%;
 }
