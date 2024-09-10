@@ -629,6 +629,6 @@ header {
   width: 100%;
 }
 
-#ver-repo {
-  margin-left: 45%;
+.ver-repo {
+  margin-left: 10px;
 }
